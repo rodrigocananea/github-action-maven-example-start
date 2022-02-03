@@ -15,8 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout source code, set up Java, etc. Then...
-
+      - uses: actions/checkout@v2
+      - name: Set up JDK 14
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+          
       - name: Configure Git User
         run: |
           git config user.email "rodrigoaguiar35@gmail.com"
