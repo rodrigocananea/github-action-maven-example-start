@@ -31,7 +31,7 @@ jobs:
         continue-on-error: true
         run: mvn -B deploy --file pom.xml --settings settings.xml
       - name: clean up target folder
-        run: rmdir /s /q ./target/lib ./target/test-classes
+        run: rmdir /s ./target/lib ./target/test-classes
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0
         # TODO: make this only run if the build step at least ran
