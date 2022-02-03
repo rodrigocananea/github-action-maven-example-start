@@ -19,8 +19,8 @@ jobs:
 
       - name: Configure Git User
         run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
+          git config user.email "rodrigoaguiar35@gmail.com"
+          git config user.name "Rodrigo Cananea"
 
       - name: Maven Release
         run: mvn release:prepare release:perform -B -s .maven_settings.xml -DreleaseVersion=${{ github.event.inputs.releaseVersion }} -DdevelopmentVersion=${{ github.event.inputs.developmentVersion }}
